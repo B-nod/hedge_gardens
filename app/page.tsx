@@ -133,7 +133,7 @@ export default async function Home() {
 
       {/* Call to Action */}
 
-      <InstagramFeed />
+      {/* <InstagramFeed /> */}
     </main>
   );
 }

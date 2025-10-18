@@ -43,7 +43,7 @@ export default function ContactPage() {
                     Our Office
                   </h3>
                   <p className="text-gray-600">
-                    123 Greenway Street, Napa Valley, CA 94558
+                   12 Leesands Cl, Fulwood, Preston PR2 9AJ
                   </p>
                 </div>
               </li>
@@ -54,7 +54,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800">Phone</h3>
-                  <p className="text-gray-600">+1 (707) 555-0123</p>
+                  <p className="text-gray-600">07846666375</p>
                 </div>
               </li>
 
@@ -64,7 +64,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800">Email</h3>
-                  <p className="text-gray-600">info@landscaper.com</p>
+                  <p className="text-gray-600">hedgetovan@gmail.com</p>
                 </div>
               </li>
             </ul>
@@ -77,20 +77,14 @@ export default function ContactPage() {
             transition={{ duration: 0.3 }}
             // 
           >
+          
             <iframe
-              src="https://maps.google.com/maps?q=10+Hudson+Yards%2C+10256&amp;iwloc=near&amp;output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2357.224405093949!2d-2.672185424478075!3d53.785493441776254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4d91a90b5bb0c29%3A0xd9c4166353ede516!2sHedge%20Gardening%20%26%20Van%20services!5e0!3m2!1sen!2suk!4v1760802347370!5m2!1sen!2suk"
               height="920"
               loading="lazy"
               className="border-0 w-full h-[620px]"
             ></iframe>
-            {/* <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3156.493064232192!2d-122.30527418432135!3d38.297539979667996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808502e3e9b8d0b3%3A0x5c704c5b4a3c8c23!2sNapa%20Valley!5e0!3m2!1sen!2sus!4v1630792207145!5m2!1sen!2sus"
-              width="100%"
-              height="400"
-              allowFullScreen
-              loading="lazy"
-              className="border-0 w-full h-[400px]"
-            ></iframe> */}
+         
           </motion.div>
         </div>
       </section>
