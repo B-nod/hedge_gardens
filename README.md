@@ -106,8 +106,8 @@ landscaper/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://gitlab.com/pradeepmoktan765/landscaping.git
-cd landscaper
+git clone https://github.com/B-nod/hedge_gardens
+cd hedge_gardens
 ```
 
 ### 2. Install Dependencies
