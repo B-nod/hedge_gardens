@@ -1,6 +1,6 @@
-# 🌿 Landscaper - Professional Landscaping Services Website
+# 🌿 Hedge Gardening - Professional Hedge Gardening and Van Services Website
 
-A modern, full-featured landscaping business website built with Next.js 15, featuring dynamic content management, testimonial system, Instagram integration, and an admin dashboard.
+A modern, full-featured hedge gardening and van services business website built with Next.js 15, featuring dynamic content management, testimonial system, Instagram integration, and an admin dashboard.
 
 ![Next.js](https://img.shields.io/badge/Next.js-15.5.4-black)
 ![React](https://img.shields.io/badge/React-19.1.0-blue)
