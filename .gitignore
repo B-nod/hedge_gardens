@@ -39,6 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+<<<<<<< HEAD
 landscaper-deploy.zip
 hedges.pem
 production.env
+=======
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae

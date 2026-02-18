@@ -38,6 +38,10 @@ body {
 
 @layer base {
   .padding-responsive {
+<<<<<<< HEAD
     @apply py-16;
+=======
+    @apply py-16 sm:px-4;
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
   }
 }

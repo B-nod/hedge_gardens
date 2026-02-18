@@ -5,12 +5,18 @@ import { Testimonial } from "../../../../lib/entities/Testimonial";
 // Initialize the database connection
 const initializeDb = async () => {
   if (!AppDataSource.isInitialized) {
+<<<<<<< HEAD
     console.log("Initializing database connection...");
     await AppDataSource.initialize();
     console.log("Database connection initialized.");
   }
   return AppDataSource.getRepository(Testimonial);
   
+=======
+    await AppDataSource.initialize();
+  }
+  return AppDataSource.getRepository(Testimonial);
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
 };
 
 // GET: /api/testimonials/all - Get all testimonials (including unapproved)

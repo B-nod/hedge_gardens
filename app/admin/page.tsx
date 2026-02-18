@@ -8,7 +8,10 @@ import { Testimonial } from "../../lib/entities/Testimonial";
 
 export default function AdminDashboard() {
   const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [actionLoading, setActionLoading] = useState<number | null>(null);
@@ -127,15 +130,19 @@ export default function AdminDashboard() {
     );
   }
 
+<<<<<<< HEAD
   const signOut = async () => {
     await fetch("/api/auth", { method: "DELETE" });
     window.location.href = "/admin/login";
   };
 
+=======
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
   return (
     <div className="min-h-screen bg-gray-100 pt-24">
       <Toaster position="top-right" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<<<<<<< HEAD
         {/* logout button */}
         <button
           onClick={() => signOut()}
@@ -143,6 +150,8 @@ export default function AdminDashboard() {
         >
           Logout
         </button>
+=======
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
         <div className="flex justify-between items-center mb-6 flex-wrap gap-y-4">
           <h1 className="text-3xl font-bold text-gray-800">
             Testimonials Management

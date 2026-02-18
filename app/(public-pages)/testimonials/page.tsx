@@ -1,6 +1,7 @@
 import { Testimonial } from "../../../lib/entities/Testimonial";
 import TestimonialsPage from "./pages";
 
+<<<<<<< HEAD
 // dynamic fetch
 export const dynamic = "force-dynamic";
 
@@ -19,6 +20,15 @@ async function getTestimonials(): Promise<Testimonial[]> {
       // {
       //   next: { revalidate: 3600 }, // Revalidate every hour
       // }
+=======
+async function getTestimonials(): Promise<Testimonial[]> {
+  try {
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_APP_URL}/api/testimonials`,
+      {
+        next: { revalidate: 3600 }, // Revalidate every hour
+      }
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
     );
 
     if (!response.ok) {
@@ -33,6 +43,7 @@ async function getTestimonials(): Promise<Testimonial[]> {
 }
 
 const Index = async () => {
+<<<<<<< HEAD
   const fetchedTestimonials = await getTestimonials();
   const testimonials =
     fetchedTestimonials.length > 0
@@ -72,6 +83,9 @@ const Index = async () => {
     },
   ];
 
+=======
+  const testimonials = await getTestimonials();
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
   return (
     <div>
       <TestimonialsPage testimonials={testimonials} />

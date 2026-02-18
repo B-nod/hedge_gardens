@@ -56,7 +56,11 @@ export default function TestimonialSection({
   return (
     <section
       id="testimonials"
+<<<<<<< HEAD
       className="grid grid-cols-1 lg:grid-cols-2 padding-responsive !pb-0 border-b-2 border-black/50"
+=======
+      className="grid grid-cols-1 lg:grid-cols-2 padding-responsive"
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
     >
       {/* Left Side - Image and Info */}
       <div className="relative flex flex-col">
@@ -72,6 +76,10 @@ export default function TestimonialSection({
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
             transition={{ duration: 0.8 }}
             className="absolute bottom-0 left-0 right-0 p-8 sm:p-12 lg:p-16 text-start"
           >
@@ -83,6 +91,10 @@ export default function TestimonialSection({
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
+=======
+          
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
           transition={{ duration: 0.8, delay: 0.2 }}
           className="bg-green-900 text-white text-start px-8 sm:px-12 lg:px-16 flex-1 flex flex-col  py-12"
         >
@@ -108,6 +120,10 @@ export default function TestimonialSection({
           <motion.div
             initial={{ scale: 0, rotate: -180 }}
             whileInView={{ scale: 1, rotate: 0 }}
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
             transition={{ duration: 0.6, type: "spring" }}
             className="flex justify-center"
           >

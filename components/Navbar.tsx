@@ -1,6 +1,9 @@
 "use client";
 
+<<<<<<< HEAD
 import Image from "next/image";
+=======
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -9,13 +12,18 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+<<<<<<< HEAD
   // const [authenticated, setAuthenticated] = useState(false);
+=======
+  const [authenticated, setAuthenticated] = useState(false);
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
 
   const isAdmin = pathname === "/admin";
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/#about" },
     { name: "Services", path: "/#services" },
+<<<<<<< HEAD
     { name: "Gallery", path: "/gallery" },
     { name: "Testimonials", path: "/testimonials" },
     { name: "Contact", path: "/contact" },
@@ -23,6 +31,15 @@ export default function Navbar() {
     //   name: authenticated ? "Admin" : "Login",
     //   path: authenticated ? "/admin" : "/admin/login",
     // },
+=======
+    { name: "Gallery", path: "/#gallery" },
+    { name: "Testimonials", path: "/testimonials" },
+    { name: "Contact", path: "/contact" },
+    {
+      name: authenticated ? "Admin" : "Login",
+      path: authenticated ? "/admin" : "/admin/login",
+    },
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
   ];
 
   useEffect(() => {
@@ -42,7 +59,11 @@ export default function Navbar() {
       try {
         const response = await fetch("/api/auth");
         const data = await response.json();
+<<<<<<< HEAD
         // setAuthenticated(data.authenticated);
+=======
+        setAuthenticated(data.authenticated);
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
       } catch (error) {
         console.error("Error checking authentication:", error);
       }
@@ -54,16 +75,24 @@ export default function Navbar() {
     <header
       className={`fixed w-full z-50 transition-all duration-300  ${
         scrolled
+<<<<<<< HEAD
           ? "bg-white  shadow-sm  "
           : isAdmin
             ? "bg-white  backdrop-blur-sm "
             : "bg-white md:bg-transparent backdrop-blur-sm "
+=======
+          ? "bg-white  shadow-sm py-6 "
+          : isAdmin
+          ? "bg-white  backdrop-blur-sm py-3"
+          : "bg-white md:bg-transparent backdrop-blur-sm py-3"
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold text-green-600">
+<<<<<<< HEAD
             {/* Hedge Gardening And Van Services */}
             <Image
               src="/logo.png"
@@ -72,6 +101,9 @@ export default function Navbar() {
               height={120}
               className="w-32 h-24 object-cover "
             />
+=======
+          Hedge Gardens
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
           </Link>
 
           {/* Desktop Navigation */}
@@ -84,10 +116,17 @@ export default function Navbar() {
                   pathname === link.path
                     ? "text-green-600"
                     : isAdmin
+<<<<<<< HEAD
                       ? "text-black"
                       : scrolled
                         ? "text-black hover:text-green-600"
                         : "text-white hover:text-green-600"
+=======
+                    ? "text-black"
+                    : scrolled
+                    ? "text-black hover:text-green-600"
+                    : "text-white hover:text-green-600"
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
                 }`}
               >
                 {link.name}

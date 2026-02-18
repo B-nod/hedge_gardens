@@ -1,14 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
+<<<<<<< HEAD
 import { ChevronUp, Facebook, MessageCircleMore } from "lucide-react";
 import Image from "next/image";
+=======
+import { ChevronUp, Facebook, Instagram } from "lucide-react";
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
 import { useState } from "react";
 
 export default function FooterSection() {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
+<<<<<<< HEAD
   const year = new Date().getFullYear();
+=======
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
   // Show scroll to top button when scrolled down
   if (typeof window !== "undefined") {
     window.addEventListener("scroll", () => {
@@ -119,6 +126,7 @@ export default function FooterSection() {
             />
           </svg>
 
+<<<<<<< HEAD
           <Image
             src="/logo.png"
             alt="Logo"
@@ -130,6 +138,40 @@ export default function FooterSection() {
           {/* <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
             landscaping
           </h2> */}
+=======
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
+            Hedge Gardens
+          </h2>
+        </motion.div>
+
+        {/* Free Quote Button */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mb-8 sm:mb-10"
+        >
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <button
+              //   variant="outline"
+              className="border-2 border-green-800 text-green-800 flex items-center justify-center mx-auto hover:bg-green-800 hover:text-white rounded-full px-8 py-2 text-base sm:text-lg font-medium transition-all duration-300 bg-transparent"
+            >
+              <svg
+                className="w-5 h-5 mr-2"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <rect x="3" y="6" width="18" height="12" rx="2" />
+                <path d="M3 10h18" />
+                <circle cx="8" cy="14" r="1" />
+                <circle cx="16" cy="14" r="1" />
+              </svg>
+              Free Quote
+            </button>
+          </motion.div>
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
         </motion.div>
 
         {/* Contact Information */}
@@ -140,6 +182,7 @@ export default function FooterSection() {
           className="space-y-2 mb-8 sm:mb-10"
         >
           <p className="text-gray-700 text-base sm:text-lg">
+<<<<<<< HEAD
             Call Us:{" "}
             <a href="tel:0784666375" className="font-semibold">
               07846 666 375
@@ -147,6 +190,12 @@ export default function FooterSection() {
           </p>
           <p className="text-gray-600 text-sm sm:text-base">
             12 Leesands Close, Fulwood, Preston, PR2 9AJ, England
+=======
+            Call Us: <span className="font-semibold">07346279113</span>
+          </p>
+          <p className="text-gray-600 text-sm sm:text-base">
+            12 Leesands Cl, Fulwood, Preston PR2 9AJ
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
           </p>
         </motion.div>
 
@@ -172,11 +221,34 @@ export default function FooterSection() {
               <path d="M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2z" />
             </svg>
           </motion.a>
+<<<<<<< HEAD
           {/* Pinterest Icon */}
 
           {/* Facebook Icon */}
           <motion.a
             href="https://www.facebook.com/p/Hedge-Gardening-And-Van-Services-61577099914404/"
+=======
+
+          {/* Pinterest Icon */}
+          <motion.a
+            href="#"
+            whileHover={{ scale: 1.2, rotate: 5 }}
+            whileTap={{ scale: 0.9 }}
+            className="text-green-800 hover:text-green-700 transition-colors"
+          >
+            <svg
+              className="w-6 h-6 sm:w-7 sm:h-7"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path d="M12 2C6.477 2 2 6.477 2 12c0 4.237 2.636 7.855 6.356 9.312-.088-.791-.167-2.005.035-2.868.182-.78 1.172-4.97 1.172-4.97s-.299-.6-.299-1.486c0-1.39.806-2.428 1.81-2.428.852 0 1.264.64 1.264 1.408 0 .858-.545 2.14-.828 3.33-.236.995.5 1.807 1.48 1.807 1.778 0 3.144-1.874 3.144-4.58 0-2.393-1.72-4.068-4.177-4.068-2.845 0-4.515 2.135-4.515 4.34 0 .859.331 1.781.745 2.281a.3.3 0 01.069.288l-.278 1.133c-.044.183-.145.223-.335.134-1.249-.581-2.03-2.407-2.03-3.874 0-3.154 2.292-6.052 6.608-6.052 3.469 0 6.165 2.473 6.165 5.776 0 3.447-2.173 6.22-5.19 6.22-1.013 0-1.965-.525-2.291-1.148l-.623 2.378c-.226.869-.835 1.958-1.244 2.621.937.29 1.931.446 2.962.446 5.523 0 10-4.477 10-10S17.523 2 12 2z" />
+            </svg>
+          </motion.a>
+
+          {/* Facebook Icon */}
+          <motion.a
+            href="#"
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
             whileHover={{ scale: 1.2, rotate: 5 }}
             whileTap={{ scale: 0.9 }}
             className="text-green-800 hover:text-green-700 transition-colors"
@@ -185,6 +257,17 @@ export default function FooterSection() {
           </motion.a>
 
           {/* Instagram Icon */}
+<<<<<<< HEAD
+=======
+          <motion.a
+            href="#"
+            whileHover={{ scale: 1.2, rotate: 5 }}
+            whileTap={{ scale: 0.9 }}
+            className="text-green-800 hover:text-green-700 transition-colors"
+          >
+            <Instagram className="w-6 h-6 sm:w-7 sm:h-7" />
+          </motion.a>
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
         </motion.div>
 
         {/* Copyright and Credits */}
@@ -194,16 +277,28 @@ export default function FooterSection() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-gray-600 text-xs sm:text-sm space-y-1"
         >
+<<<<<<< HEAD
           <p>© {year} Hedge Gardening & Van Services. All rights reserved.</p>
           <p>
             Proudly powered by{" "}
             <a
               href="/"
+=======
+          <p>© 2025 Garden Theme by VamTam. All rights reserved.</p>
+          <p>
+            Proudly powered by{" "}
+            <a
+              href="https://www.marichitechai.com/"
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
               target="_blank"
               rel="noopener noreferrer"
               className="text-green-800 hover:text-green-700 font-medium transition-colors"
             >
+<<<<<<< HEAD
               Foxbeat
+=======
+              MarichiTech AI
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
             </a>
             .
           </p>
@@ -224,6 +319,7 @@ export default function FooterSection() {
       >
         <ChevronUp className="w-6 h-6" />
       </motion.button>
+<<<<<<< HEAD
       <motion.a
         initial={{ opacity: 0 }}
         animate={{
@@ -238,6 +334,8 @@ export default function FooterSection() {
       >
         <MessageCircleMore className="w-24 h-24 sm:w-16 h-16-12" />
       </motion.a>
+=======
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
     </footer>
   );
 }

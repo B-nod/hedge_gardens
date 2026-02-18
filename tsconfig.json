@@ -24,6 +24,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
+<<<<<<< HEAD
   "include": [
     "next-env.d.ts",
     "**/*.ts",
@@ -31,5 +32,8 @@
     ".next/types/**/*.ts",
     "server.js"
   ],
+=======
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
   "exclude": ["node_modules"]
 }

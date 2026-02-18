@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 # 🌿 Hedge Gardening And Van Services - Professional Landscaping Services Website
 
 A modern, full-featured landscaping business website built with Next.js 15, featuring dynamic content management, testimonial system, Instagram integration, and an admin dashboard.
+=======
+# 🌿 Hedge Gardening - Professional Hedge Gardening and Van Services Website
+
+A modern, full-featured hedge gardening and van services business website built with Next.js 15, featuring dynamic content management, testimonial system, Instagram integration, and an admin dashboard.
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
 
 ![Next.js](https://img.shields.io/badge/Next.js-15.5.4-black)
 ![React](https://img.shields.io/badge/React-19.1.0-blue)
@@ -106,8 +112,13 @@ landscaper/
 ### 1. Clone the Repository
 
 ```bash
+<<<<<<< HEAD
 git clone https://gitlab.com/pradeepmoktan765/landscaping.git
 cd landscaper
+=======
+git clone https://github.com/B-nod/hedge_gardens
+cd hedge_gardens
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
 ```
 
 ### 2. Install Dependencies
@@ -124,19 +135,33 @@ Create a `.env.local` file in the root directory:
 # Database Configuration
 DB_HOST=localhost
 DB_PORT=3306
+<<<<<<< HEAD
 DB_USER=your_db_username
 DB_PASS=your_db_password
 DB_NAME=landscaper_db
+=======
+DB_USERNAME=your_db_username
+DB_PASSWORD=your_db_password
+DB_DATABASE=landscaper_db
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
 
 # JWT Secret (generate a secure random string)
 JWT_SECRET=your_super_secret_jwt_key_here
 
 # Admin Credentials
+<<<<<<< HEAD
 ADMIN_USER=admin
 ADMIN_PASS=your_secure_password
 
 # App URL
 NEXT_PUBLIC_APP_URL=http://localhost:3001
+=======
+ADMIN_USERNAME=admin
+ADMIN_PASSWORD=your_secure_password
+
+# App URL
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
 
 # Instagram API (Optional)
 INSTAGRAM_ACCESS_TOKEN=your_instagram_access_token
@@ -159,7 +184,11 @@ CREATE DATABASE landscaper_db;
 npm run dev
 ```
 
+<<<<<<< HEAD
 Open [http://localhost:3001](http://localhost:3001) to view the application.
+=======
+Open [http://localhost:3000](http://localhost:3000) to view the application.
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
 
 ### 6. Build for Production
 
@@ -245,6 +274,7 @@ npm start        # Start production server
 npm run lint     # Run ESLint
 ```
 
+<<<<<<< HEAD
 ## 🚀 Deploying to cPanel
 
 This project can be deployed to cPanel hosting with Node.js support. See the [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) for complete instructions.
@@ -272,6 +302,8 @@ This project can be deployed to cPanel hosting with Node.js support. See the [DE
 
 For detailed step-by-step instructions, troubleshooting, and maintenance tips, see [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md).
 
+=======
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
 ## 🌐 Deployment
 
 ### Vercel (Recommended)

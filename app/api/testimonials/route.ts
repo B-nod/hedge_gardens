@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+<<<<<<< HEAD
 import { z } from "zod";
 import AppDataSource from "../../../lib/db";
 import { Testimonial } from "../../../lib/entities/Testimonial";
@@ -8,6 +9,10 @@ const testimonialSchema = z.object({
   name: z.string().min(1, "Name is required").max(100, "Name is too long"),
   message: z.string().min(1, "Message is required").max(1000, "Message is too long"),
 });
+=======
+import AppDataSource from "../../../lib/db";
+import { Testimonial } from "../../../lib/entities/Testimonial";
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
 
 // Initialize the database connection
 const initializeDb = async () => {
@@ -38,6 +43,7 @@ export async function GET() {
 // POST: /api/testimonials - Create a new testimonial
 export async function POST(request: Request) {
   try {
+<<<<<<< HEAD
     // Apply rate limiting
     const rateLimitResponse = await rateLimit(request);
     if (rateLimitResponse) return rateLimitResponse;
@@ -55,6 +61,16 @@ export async function POST(request: Request) {
     }
     
     const { name, message } = validation.data;
+=======
+    const { name, message } = await request.json();
+
+    if (!name || !message) {
+      return NextResponse.json(
+        { error: "Name and message are required" },
+        { status: 400 }
+      );
+    }
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
 
     const testimonialRepository = await initializeDb();
     const testimonial = testimonialRepository.create({

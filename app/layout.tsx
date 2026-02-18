@@ -23,11 +23,16 @@ const bricolage = Bricolage_Grotesque({
 });
 
 export const metadata: Metadata = {
+<<<<<<< HEAD
   title: "Hedge Gardening And Van Services",
+=======
+  title: "Landscaper",
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
   description:
     "Professional landscaping services to create and maintain beautiful outdoor environments",
 };
 
+<<<<<<< HEAD
 const pingSitemap = async () => {
   const appUrl = process.env.NEXT_PUBLIC_APP_URL;
   if (!appUrl) return;
@@ -51,6 +56,8 @@ if (process.env.NODE_ENV === "production") {
   pingSitemap();
 }
 
+=======
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
 export default function RootLayout({
   children,
 }: Readonly<{

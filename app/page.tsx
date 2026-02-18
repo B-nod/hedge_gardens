@@ -1,10 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+<<<<<<< HEAD
+=======
+import InstagramFeed from "../components/InstagramFeed";
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
 import Section from "../components/Section";
 import WhoWeAreSection from "../components/WhoAreWe";
 import { Testimonial } from "../lib/entities/Testimonial";
 import ServicesSection from "../section/service";
 import TestimonialSection from "../section/Testimonial";
+<<<<<<< HEAD
 import WorksPortfolioSection from "../section/WorkPortfolio";
 
 export const dynamic = "force-dynamic";
@@ -48,10 +53,18 @@ export default async function Home() {
       createdAt: new Date("2025-10-15T14:32:37.505Z"),
     },
       ];
+=======
+import WhyChooseUsSection from "../section/WhyChooseUs";
+import WorksPortfolioSection from "../section/WorkPortfolio";
+
+export default async function Home() {
+  const testimonials = await getTestimonials();
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
 
   return (
     <main>
       {/* Hero Section */}
+<<<<<<< HEAD
       <Section className="bg-[url('/banner/banner.webp')] bg-cover bg-top relative ">
         <div className="bg-black/30 p-6 rounded-xl w-full h-full absolute  inset-0" />
         <div className="text-center py-52  relative">
@@ -68,6 +81,24 @@ export default async function Home() {
               className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg text-lg font-medium transition-colors"
             >
               Contact Us
+=======
+      <Section className="bg-[url('/banner/banner-bg.webp')] bg-cover bg-center relative ">
+        <div className="bg-black/30 p-6 rounded-xl w-full h-full absolute  inset-0" />
+        <div className="text-center py-52  relative">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Transform Your Outdoor Space
+          </h1>
+          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
+            Professional landscaping services to create and maintain beautiful
+            outdoor environments
+          </p>
+          <div className="space-x-4 flex  justify-center items-center flex-wrap gap-2">
+            <Link
+              href="/testimonials"
+              className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg text-lg font-medium transition-colors"
+            >
+              Review Us
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
             </Link>
             <Link
               href="/#services"
@@ -90,7 +121,11 @@ export default async function Home() {
       {/* Featured Services */}
       <WhoWeAreSection />
       <ServicesSection />
+<<<<<<< HEAD
       {/* <WhyChooseUsSection /> */}
+=======
+      <WhyChooseUsSection />
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
       {/* <Section
         title="Our Services"
         description="Professional landscaping services tailored to your needs"
@@ -149,6 +184,7 @@ export default async function Home() {
         </div>
       </Section> */}
 
+<<<<<<< HEAD
       <div className="text-center mt-24">
         {/* Header */}
 
@@ -158,6 +194,16 @@ export default async function Home() {
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight max-w-4xl mx-auto px-4">
           What our clients say about{" "}
           <span className="text-emerald-600">our landscaping services</span>
+=======
+      <div className="text-center">
+        {/* Header */}
+
+        <p className="text-xs sm:text-sm font-medium text-gray-600 mb-3 sm:mb-4 tracking-wider">
+          Testimonials
+        </p>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight max-w-4xl mx-auto px-4">
+          What our clients say about our landscaping services
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
         </h2>
         <TestimonialSection testimonials={testimonials} />
       </div>
@@ -178,6 +224,7 @@ export default async function Home() {
 
 async function getTestimonials(): Promise<Testimonial[]> {
   try {
+<<<<<<< HEAD
     const hostname =
       process.env.HOSTNAME && process.env.HOSTNAME !== "0.0.0.0"
         ? process.env.HOSTNAME
@@ -188,6 +235,13 @@ async function getTestimonials(): Promise<Testimonial[]> {
 
     const response = await fetch(
       `${baseUrl}/api/testimonials/all?approved=true`,
+=======
+    const response = await fetch(
+      `${process.env.NEXT_PUBLIC_APP_URL}/api/testimonials/all?approved=true`,
+      {
+        next: { revalidate: 3600 }, // Revalidate every hour
+      }
+>>>>>>> 058d73a796481a7533eeced7aa3c9a4d72162dae
     );
 
     if (!response.ok) {
