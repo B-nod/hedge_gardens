@@ -15,7 +15,7 @@ export default function WhoWeAreSection() {
   return (
     <section id="about" className="px-4 sm:px-6 lg:px-8 overflow-hidden mt-24">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-24 items-center">
           {/* Left Column - Title */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -28,7 +28,8 @@ export default function WhoWeAreSection() {
                 WHO WE ARE
               </p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight max-w-4xl mx-auto">
-                Your Trusted Local Gardening & Van Service Experts
+                Your Trusted Local Gardening &{" "}
+                <span className="text-emerald-600">Van Service Experts</span>
               </h2>
             </div>
 
@@ -106,7 +107,7 @@ export default function WhoWeAreSection() {
               <div className="relative bg-gradient-to-b from-transparent via-lime-100/30 to-lime-800 rounded-[3rem] overflow-hidden">
                 <div className="aspect-[3/4] relative">
                   <Image
-                    src="/about/banner-home-1.webp"
+                    src="/about/hedgegirl.jpeg"
                     alt="Hedge Gardening and Van Services team at work"
                     fill
                     className="object-cover"
@@ -124,12 +125,9 @@ export default function WhoWeAreSection() {
             className="lg:col-span-4 space-y-8"
           >
             <p className="text-gray-700 leading-relaxed text-base sm:text-lg">
-              At Hedge Gardening and Van Services, we provide professional,
-              affordable, and friendly outdoor and transport solutions. From
-              hedge trimming and lawn mowing to house moves and furniture
-              assembly — our team ensures every job is done with care,
-              precision, and reliability. We proudly serve the Preston area and
-              beyond, delivering clean, green results every time.
+              We are experienced professionals in the hedge gardening and van
+              services sector turned our industry expertise into a dedicated,
+              customer focused business.
             </p>
 
             {/* Features */}

@@ -5,62 +5,69 @@ import WhoWeAreSection from "../components/WhoAreWe";
 import { Testimonial } from "../lib/entities/Testimonial";
 import ServicesSection from "../section/service";
 import TestimonialSection from "../section/Testimonial";
-import WhyChooseUsSection from "../section/WhyChooseUs";
 import WorksPortfolioSection from "../section/WorkPortfolio";
 
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
-  const testimonials = await getTestimonials() ||[
-  {
-    id: 8,
-    name: 'Tester',
-    message: '"We are new customers of this company and have been very favorably impressed with the quality of the work performed by your"',
-    approved: true,
-    createdAt: '2025-10-18T18:45:39.578Z'
-  },
-  {
-    id: 7,
-    name: 'Jared Blackburn',
-    message: 'We are new customers of this company and have been very favorably impressed with the quality of the work performed by your employees.',
-    approved: true,
-    createdAt: '2025-10-15T19:44:18.520Z'
-  },
-  {
-    id: 6,
-    name: 'Jarrod Villarreal',
-    message: "Professional, reliable, and affordable. They've been maintaining our commercial property for over 3 years now. Never disappointed!",
-    approved: true,
-    createdAt: '2025-10-15T14:32:51.960Z'
-  },
-  {
-    id: 5,
-    name: 'Justine Olsen',
-    message: '"Best lawn service I have ever used. I use them for everything from mowing, fertilization and irrigation. I even had them pressure wash my house and it looks like new',
-    approved: true,
-    createdAt: '2025-10-15T14:32:37.505Z'
-  }
-]
+  const fetchedTestimonials = await getTestimonials();
+  const testimonials =
+    fetchedTestimonials.length > 0
+      ? fetchedTestimonials
+      : [
+    {
+      id: 8,
+      name: "Tester",
+      message:
+        '"We are new customers of this company and have been very favorably impressed with the quality of the work performed by your"',
+      approved: true,
+      createdAt: new Date("2025-10-18T18:45:39.578Z"),
+    },
+    {
+      id: 7,
+      name: "Jared Blackburn",
+      message:
+        "We are new customers of this company and have been very favorably impressed with the quality of the work performed by your employees.",
+      approved: true,
+      createdAt: new Date("2025-10-15T19:44:18.520Z"),
+    },
+    {
+      id: 6,
+      name: "Jarrod Villarreal",
+      message:
+        "Professional, reliable, and affordable. They've been maintaining our commercial property for over 3 years now. Never disappointed!",
+      approved: true,
+      createdAt: new Date("2025-10-15T14:32:51.960Z"),
+    },
+    {
+      id: 5,
+      name: "Justine Olsen",
+      message:
+        '"Best lawn service I have ever used. I use them for everything from mowing, fertilization and irrigation. I even had them pressure wash my house and it looks like new',
+      approved: true,
+      createdAt: new Date("2025-10-15T14:32:37.505Z"),
+    },
+      ];
 
   return (
     <main>
       {/* Hero Section */}
-      <Section className="bg-[url('/banner/banner-bg.webp')] bg-cover bg-center relative ">
+      <Section className="bg-[url('/banner/banner.webp')] bg-cover bg-top relative ">
         <div className="bg-black/30 p-6 rounded-xl w-full h-full absolute  inset-0" />
         <div className="text-center py-52  relative">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Transform Your Outdoor Space
+            Hedge Gardening &amp; Van Services Ltd
           </h1>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            Professional landscaping services to create and maintain beautiful
-            outdoor environments
+            Friendly gardener with enthusiasm, professionalism &amp; proficiency
+            Keeping your outdoor spaces tidy &amp; any removal needs hassle free
           </p>
           <div className="space-x-4 flex  justify-center items-center flex-wrap gap-2">
             <Link
-              href="/testimonials"
+              href="/contact"
               className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg text-lg font-medium transition-colors"
             >
-              Review Us
+              Contact Us
             </Link>
             <Link
               href="/#services"
@@ -83,7 +90,7 @@ export default async function Home() {
       {/* Featured Services */}
       <WhoWeAreSection />
       <ServicesSection />
-      <WhyChooseUsSection />
+      {/* <WhyChooseUsSection /> */}
       {/* <Section
         title="Our Services"
         description="Professional landscaping services tailored to your needs"
@@ -142,14 +149,15 @@ export default async function Home() {
         </div>
       </Section> */}
 
-      <div className="text-center">
+      <div className="text-center mt-24">
         {/* Header */}
 
-        <p className="text-xs sm:text-sm font-medium text-gray-600 mb-3 sm:mb-4 tracking-wider">
+        <p className="text-sm font-medium text-gray-600 mb-4 tracking-wider uppercase">
           Testimonials
         </p>
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight max-w-4xl mx-auto px-4">
-          What our clients say about our landscaping services
+          What our clients say about{" "}
+          <span className="text-emerald-600">our landscaping services</span>
         </h2>
         <TestimonialSection testimonials={testimonials} />
       </div>
@@ -170,8 +178,16 @@ export default async function Home() {
 
 async function getTestimonials(): Promise<Testimonial[]> {
   try {
+    const hostname =
+      process.env.HOSTNAME && process.env.HOSTNAME !== "0.0.0.0"
+        ? process.env.HOSTNAME
+        : "localhost";
+    const baseUrl =
+      process.env.NEXT_PUBLIC_APP_URL ||
+      `http://${hostname}:${process.env.PORT || 3001}`;
+
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_APP_URL}/api/testimonials/all?approved=true`
+      `${baseUrl}/api/testimonials/all?approved=true`,
     );
 
     if (!response.ok) {

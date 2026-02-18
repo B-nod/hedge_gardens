@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: process.env.SITE_URL || "https://yourdomain.com",
+  siteUrl: process.env.SITE_URL || "https://hedgegardening.co.uk/",
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   exclude: ["/admin/*", "/api/*"],

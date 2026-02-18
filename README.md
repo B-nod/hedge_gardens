@@ -124,16 +124,16 @@ Create a `.env.local` file in the root directory:
 # Database Configuration
 DB_HOST=localhost
 DB_PORT=3306
-DB_USERNAME=your_db_username
-DB_PASSWORD=your_db_password
-DB_DATABASE=landscaper_db
+DB_USER=your_db_username
+DB_PASS=your_db_password
+DB_NAME=landscaper_db
 
 # JWT Secret (generate a secure random string)
 JWT_SECRET=your_super_secret_jwt_key_here
 
 # Admin Credentials
-ADMIN_USERNAME=admin
-ADMIN_PASSWORD=your_secure_password
+ADMIN_USER=admin
+ADMIN_PASS=your_secure_password
 
 # App URL
 NEXT_PUBLIC_APP_URL=http://localhost:3001
@@ -159,7 +159,7 @@ CREATE DATABASE landscaper_db;
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view the application.
+Open [http://localhost:3001](http://localhost:3001) to view the application.
 
 ### 6. Build for Production
 
@@ -244,6 +244,33 @@ npm run build    # Build for production
 npm start        # Start production server
 npm run lint     # Run ESLint
 ```
+
+## 🚀 Deploying to cPanel
+
+This project can be deployed to cPanel hosting with Node.js support. See the [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md) for complete instructions.
+
+### Quick Deploy Steps
+
+1. **Build the deployment package:**
+   ```bash
+   ./build-deploy.sh
+   ```
+
+2. **Upload `landscaper-deploy.zip` to cPanel**
+
+3. **Setup database in cPanel MySQL Databases**
+
+4. **Create `.env.production` with your database credentials**
+
+5. **Setup Node.js app in cPanel**
+
+6. **Install dependencies and start:**
+   ```bash
+   npm install --production
+   node server.js
+   ```
+
+For detailed step-by-step instructions, troubleshooting, and maintenance tips, see [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md).
 
 ## 🌐 Deployment
 

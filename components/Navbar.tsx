@@ -16,7 +16,7 @@ export default function Navbar() {
     { name: "Home", path: "/" },
     { name: "About", path: "/#about" },
     { name: "Services", path: "/#services" },
-    { name: "Gallery", path: "/#gallery" },
+    { name: "Gallery", path: "/gallery" },
     { name: "Testimonials", path: "/testimonials" },
     { name: "Contact", path: "/contact" },
     // {
@@ -56,8 +56,8 @@ export default function Navbar() {
         scrolled
           ? "bg-white  shadow-sm  "
           : isAdmin
-          ? "bg-white  backdrop-blur-sm "
-          : "bg-white md:bg-transparent backdrop-blur-sm "
+            ? "bg-white  backdrop-blur-sm "
+            : "bg-white md:bg-transparent backdrop-blur-sm "
       }`}
     >
       <div className="container mx-auto px-4">
@@ -68,9 +68,9 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="Logo"
-              width={50}
-              height={50}
-              className="w-16 h-16 object-cover "
+              width={120}
+              height={120}
+              className="w-32 h-24 object-cover "
             />
           </Link>
 
@@ -84,10 +84,10 @@ export default function Navbar() {
                   pathname === link.path
                     ? "text-green-600"
                     : isAdmin
-                    ? "text-black"
-                    : scrolled
-                    ? "text-black hover:text-green-600"
-                    : "text-white hover:text-green-600"
+                      ? "text-black"
+                      : scrolled
+                        ? "text-black hover:text-green-600"
+                        : "text-white hover:text-green-600"
                 }`}
               >
                 {link.name}

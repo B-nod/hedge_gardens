@@ -7,7 +7,7 @@ export default function ContactPage() {
   return (
     <div className="">
       {/* Banner */}
-      <section className="relative min-h-[50vh] flex items-center justify-center bg-[url('/images/banner.webp')] bg-cover bg-center">
+      <section className="relative min-h-[50vh] flex items-center justify-center bg-[url('/banner/banner-bg.webp')] bg-cover bg-center">
         <div className="absolute inset-0 bg-black/50" />
         <motion.div
           initial={{ opacity: 0, y: 30 }}

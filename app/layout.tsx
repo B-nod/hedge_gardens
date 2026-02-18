@@ -29,7 +29,10 @@ export const metadata: Metadata = {
 };
 
 const pingSitemap = async () => {
-  const sitemapUrl = `${process.env.NEXT_PUBLIC_APP_URL}/sitemap.xml`;
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL;
+  if (!appUrl) return;
+
+  const sitemapUrl = `${appUrl}/sitemap.xml`;
   try {
     await Promise.all([
       fetch(

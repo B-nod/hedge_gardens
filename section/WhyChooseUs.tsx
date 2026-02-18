@@ -44,7 +44,8 @@ export default function WhyChooseUsSection() {
                 Why Choose Us
               </p>
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                Rooted in Creativity, Built on Trust
+                Rooted in Creativity,{" "}
+                <span className="text-emerald-600">Built on Trust</span>
               </h2>
             </motion.div>
 
@@ -54,12 +55,10 @@ export default function WhyChooseUsSection() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-gray-700 text-base sm:text-lg leading-relaxed"
             >
-              At Cloudscape Landscapes, we combine art, nature, and
-              craftsmanship to create timeless outdoor spaces. Our team takes a
-              collaborative approach — blending your vision with sustainable
-              materials and modern landscape architecture. From residential
-              gardens to commercial environments, we design spaces that grow
-              beautifully with time.
+              We are long standing professionals in this sector. We bring years
+              of professional experience, reliable service, and a strong work
+              ethic to every job, delivering quality results you can trust at a
+              fair and transparent price.
             </motion.p>
           </div>
         </motion.div>
@@ -138,7 +137,7 @@ export default function WhyChooseUsSection() {
           </p>
           <div className="space-y-2">
             <p className="text-gray-900 font-semibold text-base sm:text-lg">
-              – Tulash karki
+              – Hedge Gardening & Van Services
             </p>
             <motion.div
               initial={{ pathLength: 0 }}

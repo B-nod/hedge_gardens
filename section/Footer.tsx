@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ChevronUp, Facebook } from "lucide-react";
+import { ChevronUp, Facebook, MessageCircleMore } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -124,7 +124,7 @@ export default function FooterSection() {
             alt="Logo"
             width={100}
             height={100}
-            className="w-28 h-24"
+            className="w-32 h-28"
           />
 
           {/* <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">
@@ -140,7 +140,10 @@ export default function FooterSection() {
           className="space-y-2 mb-8 sm:mb-10"
         >
           <p className="text-gray-700 text-base sm:text-lg">
-            Call Us: <span className="font-semibold">07846 666 375</span>
+            Call Us:{" "}
+            <a href="tel:0784666375" className="font-semibold">
+              07846 666 375
+            </a>
           </p>
           <p className="text-gray-600 text-sm sm:text-base">
             12 Leesands Close, Fulwood, Preston, PR2 9AJ, England
@@ -169,7 +172,6 @@ export default function FooterSection() {
               <path d="M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2z" />
             </svg>
           </motion.a>
-
           {/* Pinterest Icon */}
 
           {/* Facebook Icon */}
@@ -222,6 +224,20 @@ export default function FooterSection() {
       >
         <ChevronUp className="w-6 h-6" />
       </motion.button>
+      <motion.a
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: showScrollTop ? 1 : 0,
+          scale: showScrollTop ? 1 : 0,
+        }}
+        href="https://wa.me/44784666375"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-24 right-9 w-12 h-12 bg-green-800 hover:bg-green-700 text-white rounded-full shadow-lg flex items-center justify-center z-50 transition-colors duration-300"
+        aria-label="Scroll to top"
+      >
+        <MessageCircleMore className="w-24 h-24 sm:w-16 h-16-12" />
+      </motion.a>
     </footer>
   );
 }
